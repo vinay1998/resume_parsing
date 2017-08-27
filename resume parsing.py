@@ -9,7 +9,7 @@ class ResumeParsing:
         print("------details after parsing resume--------")
         name=re.compile(r"([a-zA-Z]){3,}\s([a-zA-Z]){3,}")
         print("Name:"+re.search(name,parsed["content"]).group())
-        ph=re.compile(r"(\(\d{3}\) (\d{3}-\d{4}))|(\d{10})")
+        ph=re.compile(r"(\d{10})")
         print("Phone Number:"+re.search(ph,parsed["content"]).group())
         mail = re.compile(r"[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}", re.IGNORECASE)
         print("Mail ID:"+re.search(mail,parsed["content"]).group())
